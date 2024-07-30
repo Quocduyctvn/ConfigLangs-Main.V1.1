@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Abstractions\Dappers\**" />
+    <Compile Remove="Aggregates\**" />
+    <Compile Remove="Enumerations\**" />
+    <EmbeddedResource Remove="Abstractions\Dappers\**" />
+    <EmbeddedResource Remove="Aggregates\**" />
+    <EmbeddedResource Remove="Enumerations\**" />
+    <None Remove="Abstractions\Dappers\**" />
+    <None Remove="Aggregates\**" />
+    <None Remove="Enumerations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\lsccommon.configLang.commandContract\lsccommon.configLang.commandContract.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,27 @@
+﻿syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+option csharp_namespace = "LangGrpc";
+package lang;
+
+service Lang {
+  rpc GetLang(GetLangRequest) returns (GetLangResponse);
+  rpc GetAllLang(GetAllLangRequest) returns (GetAllLangResponse);
+}
+
+message GetLangRequest{
+	string Id = 1;
+}
+
+message GetLangResponse{
+	string Id = 1;
+	optional string description = 2;
+	string vn = 3;
+	optional string en = 4;
+
+}
+
+message GetAllLangRequest {}
+
+message GetAllLangResponse{
+	repeated GetLangResponse Lang = 1;
+}

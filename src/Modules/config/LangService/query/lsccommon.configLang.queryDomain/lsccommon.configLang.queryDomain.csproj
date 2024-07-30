@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Abstractions\Dappers\**" />
+    <EmbeddedResource Remove="Abstractions\Dappers\**" />
+    <None Remove="Abstractions\Dappers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\lsccommon.configLang.queryContract\lsccommon.configLang.queryContract.csproj" />
+  </ItemGroup>
+
+</Project>
